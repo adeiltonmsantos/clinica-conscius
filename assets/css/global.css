@@ -188,6 +188,10 @@ nav ul li:hover{
         width: 85%;
     }
 
+    #about-us .section-main-container h1{
+        font-size: 4rem;
+    }
+
 }
 
 @media screen and (min-width: 768px){
@@ -231,6 +235,47 @@ nav ul li:hover{
 
     .home-content ul li{
         font-size: 2rem;
+    }
+
+    #about-us{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about-us .section-main-container{
+
+        max-width: 110rem;
+        max-height: 41rem;
+        display: grid;
+        row-gap: 4rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "title fig"
+            "p1 fig"
+            "p2 fig"
+            ;
+        #about-us-title{
+            grid-area: title;
+        }
+    
+        .about-us-img{
+            grid-area: fig;
+            justify-self: flex-end;
+        }
+
+        #about-us-p1{
+            grid-area: p1
+        }
+
+        #about-us-p2{
+            grid-area: p2
+        }
+
+        #about-us-p1, #about-us-p2{
+            line-height: 3.4rem;
+        }
     }
 }
 
