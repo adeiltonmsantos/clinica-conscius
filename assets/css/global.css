@@ -37,6 +37,26 @@ header, section{
     height: calc(100vh - var(--header-height));
 }
 
+section{
+    margin-top: var(--header-height);
+    padding: 4rem 5.2rem;
+}
+
+
+/* Common styles of img div's */
+.home-img, .about-us-img{
+    border: 1.2rem solid #C1C1C1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 28rem;
+    height: 28rem;
+    background-size: 137%;
+    background-position: 56% 10%;
+    background-origin: content-box;
+}
+
 /* Header, nav */
 header{
     display: flex;
@@ -111,11 +131,11 @@ nav ul li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4rem 5.2rem;
-    margin-top: var(--header-height);
+    /* padding: 4rem 5.2rem; */
+    /* margin-top: var(--header-height); */
 }
 
-.home-main-container{
+.section-main-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,17 +143,7 @@ nav ul li:hover{
 }
 
 .home-img{
-    border: 1.2rem solid #C1C1C1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 28rem;
-    height: 28rem;
     background-image: url('../img/psychologist-group01.png');
-    background-size: 137%;
-    background-position: 56% 10%;
-    background-origin: content-box;
 }
 
 .home-content{
@@ -160,6 +170,19 @@ nav ul li:hover{
     font-size: 1.6rem;
 }
 
+/* About-us section */
+.about-us-img{
+    background-image: url('../img/clinic01.png');
+}
+
+#about-us .section-main-container p{
+    font-size: 1.8rem;
+    line-height: 2.0rem;
+    text-align: justify;
+}
+
+
+/* Responsive screens */
 @media screen and (min-width: 576px){
     .home-content{
         width: 85%;
@@ -168,7 +191,7 @@ nav ul li:hover{
 }
 
 @media screen and (min-width: 768px){
-    .home-img{
+    .home-img, .about-us-img{
         width: 35rem;
         height: 35rem;
     }
@@ -183,7 +206,7 @@ nav ul li:hover{
         display: none;
     }
 
-    .home-main-container{
+    .section-main-container{
         flex-direction: row;
     }
 
@@ -216,7 +239,7 @@ nav ul li:hover{
         width: 92.6rem;
     }
 
-    .home-main-container{
+    .section-main-container{
         justify-content: space-between;
         gap: 11.4rem;
     }
