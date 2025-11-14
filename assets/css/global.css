@@ -181,6 +181,22 @@ nav ul li:hover{
     text-align: justify;
 }
 
+/* Skills section */
+#skills .section-main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "title title"
+        "fig1 fig2"
+        "fig3 fig4"
+        "text-list text-list"
+    ;
+}
+
+
+
+
 
 /* Responsive screens */
 @media screen and (min-width: 576px){
