@@ -132,21 +132,21 @@ nav ul li:hover{
     display: none;
 }
 
-
-/* Section Home */
-#home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 4rem 5.2rem; */
-    /* margin-top: var(--header-height); */
-}
+/* Common container for every section */
 
 .section-main-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3.5rem;
+}
+
+
+/* Section Home */
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .home-img{
@@ -177,8 +177,13 @@ nav ul li:hover{
     font-size: 1.6rem;
 }
 
+/* H1 styles of some sections */
+
 /* About-us section */
-#about-us .section-main-container h1{
+#about-us .section-main-container h1,
+#skills .section-main-container h1,
+#key-differentiators .section-main-container h1
+{
     font-size: 2.8rem;
 }
 
@@ -211,12 +216,13 @@ nav ul li:hover{
         "fig3 fig4"
         "text-list text-list"
     ;
+    row-gap: 2rem;
+    height: 60rem;
 }
 
 #skills .section-main-container h1{
     grid-area: title;
     justify-self: center;
-    font-size: 2.8rem;
 }
 
 #skills-img-01{
@@ -265,6 +271,32 @@ nav ul li:hover{
     line-height: 2.2rem;
 }
 
+/* Key Differentiators section */
+#key-differentiators{
+    padding-top: 12rem;
+}
+
+.key-differentiators-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.key-differentiator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 3.2rem;
+    background-color: #1D3358;
+    width: 34rem;
+    height: 12rem;
+    padding: 3rem 1.4rem;
+    border-radius: 5rem 0 5rem 0;
+    font-size: 1.8rem;
+}
 
 /* Responsive screens */
 @media screen and (min-width: 576px){
@@ -284,21 +316,60 @@ nav ul li:hover{
         height: 18rem;
     }
 
+    .key-differentiator{
+        line-height: 2.5rem;
+    }
+
 }
 
 @media screen and (min-width: 768px){
+    /* Home section */
+    #home .section-main-container{
+        margin-top: 12rem;
+    }
+
     .home-img,
     .about-us-img{
         width: 35rem;
         height: 35rem;
     }
 
+    /* Skills section */
     #skills-img-01,
     #skills-img-02,
     #skills-img-03,
     #skills-img-04{
         width: 21.5rem;
         height: 21.5rem;
+    }
+
+    /* Key Differentiators section */
+    .key-differentiators-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 2rem;
+    }
+
+    .key-differentiator:nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .key-differentiator:nth-child(2){
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .key-differentiator:nth-child(3){
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
     }
 }
 
@@ -311,7 +382,7 @@ nav ul li:hover{
         display: none;
     }
 
-    .section-main-container{
+    #home .section-main-container{
         flex-direction: row;
     }
 
@@ -382,7 +453,7 @@ nav ul li:hover{
 
     /* Skills section */
     #skills .section-main-container{
-        padding-top: 20rem;
+        padding-top: 12rem;
         grid-template-columns: 3fr 1fr 1fr;
         grid-template-rows: repeat(6, 1fr);
         width: 100rem;
@@ -441,6 +512,11 @@ nav ul li:hover{
         grid-row-start: 4;
         grid-row-end: 7;
     }
+
+    /* Key differentiators section */
+    .key-differentiators-content{
+        max-width: 90rem;
+    }
 }
 
 @media screen and (min-width: 1200px){
@@ -448,9 +524,10 @@ nav ul li:hover{
         width: 92.6rem;
     }
 
-    .section-main-container{
+    #home .section-main-container{
         justify-content: space-between;
         gap: 11.4rem;
+        /* padding-top: 5rem; */
     }
 
     /* Skills section */
