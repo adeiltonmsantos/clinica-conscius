@@ -50,7 +50,8 @@ section{
 #skills-img-01,
 #skills-img-02,
 #skills-img-03,
-#skills-img-04
+#skills-img-04,
+.contact-container
 {
     border: 1.2rem solid #C1C1C1;
     display: flex;
@@ -133,7 +134,6 @@ nav ul li:hover{
 }
 
 /* Common container for every section */
-
 .section-main-container{
     display: flex;
     flex-direction: column;
@@ -178,8 +178,6 @@ nav ul li:hover{
 }
 
 /* H1 styles of some sections */
-
-/* About-us section */
 #about-us .section-main-container h1,
 #skills .section-main-container h1,
 #key-differentiators .section-main-container h1
@@ -187,6 +185,7 @@ nav ul li:hover{
     font-size: 2.8rem;
 }
 
+/* About-us section */
 .about-us-img{
     background-image: url('../img/clinic01.png');
 }
@@ -297,6 +296,50 @@ nav ul li:hover{
     border-radius: 5rem 0 5rem 0;
     font-size: 1.8rem;
 }
+
+/* Contact section */
+#contact .section-main-container{
+    padding-top: 12rem;
+}
+
+.contact-container{
+    width: 30.8rem;
+    height: 25.9rem;
+    background-image: url('../img/note.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.contact-content{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-top: 2rem;
+}
+
+.contact-text{
+    font-family: 'Playpen Sans', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+    padding: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.brands-logos{
+    display: flex;
+    justify-content: center;
+}
+
+.brands-logos img{
+    width: 4.3rem;
+    height: 4.3rem;
+}
+
 
 /* Responsive screens */
 @media screen and (min-width: 576px){
